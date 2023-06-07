@@ -32,13 +32,13 @@ There are pre-compiled binraies in [the release page](https://github.com/fujidai
 The following one line command will automatically download and install laic to `/usr/local/bin` on Apple Silicon Mac:
 
 ```shell
-curl -L -o laic https://github.com/fujidaiti/live-app-icon/releases/download/v0.0.1/laic-aarch64-apple-darwin && chmod +x ./laic && sudo mv ./laic /usr/local/bin
+curl -L -o laic https://github.com/fujidaiti/live-app-icon/releases/download/v0.1.0/laic-aarch64-apple-darwin && chmod +x ./laic && sudo mv ./laic /usr/local/bin
 ```
 
 Or on Intel Mac:
 
 ```shell
-curl -L -o laic https://github.com/fujidaiti/live-app-icon/releases/download/v0.0.1/laic-x86_64-apple-darwin && chmod +x ./laic && sudo mv ./laic /usr/local/bin
+curl -L -o laic https://github.com/fujidaiti/live-app-icon/releases/download/v0.1.0/laic-x86_64-apple-darwin && chmod +x ./laic && sudo mv ./laic /usr/local/bin
 ```
 
 ## Usage
