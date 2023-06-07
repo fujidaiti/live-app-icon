@@ -150,6 +150,7 @@ If you find any bugs or have suggestions for improvement, please create an issue
 - [ ] Add an option to notify the command's output
 - [ ] Improve the report messages
 - [ ] Add tests
+- [ ] Check the requirements before run
 
 ### Others
 
