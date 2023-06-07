@@ -65,7 +65,7 @@ There are other options that *laic* accepts:
 
 Run `laic --help` for more information.
 
-### Resize method
+### Resize methods
 
 If the with and height of the given animated GIF is not equal, *laic* resizes it to a square according to a specified resize method:
 
