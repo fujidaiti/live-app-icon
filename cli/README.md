@@ -116,7 +116,7 @@ Notice that you need to escape the doube quotes in `--command` part since the sh
 
 If you have installed laic with `cargo install laic`, just run `cargo uninstall laic`.
 
-### 
+### Binaries
 
 If you have manually installed a laic executable, you can remove it like `sudo rm /usr/local/bin/laic` , or move it to the Trash by hand.
 
