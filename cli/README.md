@@ -143,11 +143,14 @@ If you find any bugs or have suggestions for improvement, please create an issue
 
 ## TODO
 
+### Animated icons
+- [ ] Add option to notify the command outputs
+- [ ] Allow more complex animations (e.g. [attention concepts](https://github.com/dagronf/DSFDockTile#attention-concepts))
+
 ### CLI tool
 
 - [ ] Validate the arguments
 - [ ] Refactor the code
-- [ ] Add an option to notify the command's output
 - [ ] Improve the report messages
 - [ ] Add tests
 - [ ] Check the requirements before run
