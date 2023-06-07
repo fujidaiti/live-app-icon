@@ -1,0 +1,41 @@
+[env]
+TEST_DIR = "target/.tmp"
+TEST_REPOSITORY = ".."
+
+[tasks.run]
+command = "cargo"
+args = ["run", "--", "${@}"]
+
+[tasks.run-dev]
+dependencies = ["make-test-dir"]
+command = "cargo"
+args = [
+  "run",
+  "--",
+  "-n",
+  "Vulf",
+  "-g",
+  "${TEST_REPOSITORY}/app_template/LiveAppIcon/Assets.xcassets/LiveAppIcon.dataset/live_app_icon.gif",
+  "-c",
+  "open \"https://youtu.be/mMjoI6FTlxo\"",
+  "--resize-method",
+  "center-fit",
+  "--work-dir",
+  "${TEST_DIR}",
+  "--local-repository",
+  "${TEST_REPOSITORY}",
+  "--install-location",
+  "${TEST_DIR}/Applications",
+  "--install-action",
+  "none",
+  "${@}",
+]
+
+[tasks.make-test-dir]
+command = "mkdir"
+args = ["-p", "${TEST_DIR}"]
+dependencies = ["clean-test-dir"]
+
+[tasks.clean-test-dir]
+command = "rm"
+args = ["-rf", "${TEST_DIR}"]

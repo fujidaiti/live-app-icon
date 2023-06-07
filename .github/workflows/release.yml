@@ -1,0 +1,72 @@
+name: Release new version
+run-name: ${{ github.event.pull_request.title }}
+on:
+  pull_request:
+    types: [closed]
+    branches: [release]
+jobs:
+  Create-New-Release-Tag-With-Executables:
+    if: github.event.pull_request.merged == true
+    runs-on: macos-13
+    permissions:
+      contents: write
+    env:
+      target_dir: ./target
+      manifest_path: ./cli/Cargo.toml
+      target_arm: aarch64-apple-darwin
+      target_intel: x86_64-apple-darwin
+      fallback_tag: not-yet-released
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+
+      - name: Get crate version
+        run: >
+          PKG_VERSION=$(cargo metadata --manifest-path ${{ env.manifest_path }}
+          --no-deps --format-version 1 --quiet | jq -r '.packages[0].version') &&
+          echo pkg_version=$PKG_VERSION >> "$GITHUB_ENV"
+
+      - name: Get create name
+        run: >
+          PKG_NAME=$(cargo metadata --manifest-path ${{ env.manifest_path }}
+          --no-deps --format-version 1 --quiet | jq -r '.packages[0].name') &&
+          echo pkg_name=$PKG_NAME >> "$GITHUB_ENV"
+
+      - name: Install ${{ env.target_arm }} target
+        run: rustup target install ${{ env.target_arm }}
+
+      - name: Build crate for Apple Silicon Mac in release mode
+        run: >
+          cargo build --target ${{ env.target_arm }} --release --verbose
+          --manifest-path ${{ env.manifest_path }} --target-dir  ${{ env.target_dir }} &&
+          EXE_FILE=./${{ env.pkg_name }}-${{ env.target_arm }} &&
+          mv ${{ env.target_dir }}/${{ env.target_arm }}/release/${{ env.pkg_name }} $EXE_FILE &&
+          echo arm_exe_file=$EXE_FILE >> "$GITHUB_ENV"
+
+      - name: Build crate for Intel Mac in release mode
+        run: >
+          cargo build --target ${{ env.target_intel }} --release --verbose
+          --manifest-path ${{ env.manifest_path }} --target-dir  ${{ env.target_dir }} &&
+          EXE_FILE=./${{ env.pkg_name }}-${{ env.target_intel }} &&
+          mv ${{ env.target_dir }}/${{ env.target_intel }}/release/${{ env.pkg_name }} $EXE_FILE &&
+          echo intel_exe_file=$EXE_FILE >> "$GITHUB_ENV"
+
+      - name: Get latest release tag
+        id: previous_tag
+        uses: WyriHaximus/github-action-get-previous-tag@v1
+        with:
+          prefix: v
+          fallback: ${{ env.fallback_tag }}
+
+      - name: Create tag name
+        run: echo tag_name=v${{ env.pkg_version }} >> "$GITHUB_ENV"
+
+      - name: Create release tag with executables
+        uses: softprops/action-gh-release@v1
+        if: success() && steps.previoustag.outputs.tag != ${{ env.tag_name }}
+        with:
+          tag_name: ${{ env.tag_name }}
+          body: ${{ github.event.pull_request.body }}
+          files: |
+            ${{ env.arm_exe_file }}
+            ${{ env.intel_exe_file }}

@@ -1,0 +1,20 @@
+//
+//  Config.xcconfig
+//  LiveAppIcon
+//
+//  Created by 藤田大地 on 2023/06/01.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+PRODUCT_BUNDLE_IDENTIFIER = dev.norelease.liveappicon
+PRODUCT_NAME = LiveAppIcon
+
+CODE_SIGN_IDENTITY =
+CODE_SIGN_IDENTITY[sdk=macosx*] = Apple Development
+
+CODE_SIGN_STYLE = Manual
+
+DEVELOPMENT_TEAM =
+DEVELOPMENT_TEAM[sdk=macosx*] = 6NT7B3S496
