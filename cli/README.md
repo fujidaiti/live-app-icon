@@ -1,10 +1,8 @@
 # Live App Icon for Mac
 
-*Animated app icons on your Dock, which can perfom an arbitrary shell script on click.*
+*Animated app icons on your Dock, which can execute an arbitrary shell script on click.*
 
 <img width="800" src="https://github.com/fujidaiti/github-actions-test/assets/68946713/e81a1426-1673-4f78-b1f2-918cac239170"/>
-
-
 
 ## Requirements
 
@@ -21,7 +19,7 @@ If you have the latest version of Xcode, the above requirements should be met.
 
 ### Use cargo
 
-If you are a Rust developer, the easiest way to install *laic* is with `cargo`, since it is published on crate.io.
+If you are a Rust developer, the easiest way to install *laic* is with `cargo`, since it is published on [crate.io](https://crates.io/crates/laic).
 
 ```shell
 cargo install laic
@@ -29,7 +27,7 @@ cargo install laic
 
 ### Download a binary
 
-There are pre-compiled binraies in [the release page](https://github.com/fujidaiti/live-app-icon/releases). You can manually download and install it in an appropriate location (e.g. `/usr/local/bin`). Select `laic-aarch64-apple-darwin` if you are using Apple Silicon Mac, or ` laic-x86_64-apple-darwin` if Intel Mac.
+There are pre-compiled binraies in [the release page](https://github.com/fujidaiti/live-app-icon/releases). You can manually download and install it in an appropriate location (e.g. `/usr/local/bin`). Select `laic-aarch64-apple-darwin` if you are using Apple Silicon Mac, or `laic-x86_64-apple-darwin` if Intel Mac.
 
 The following one line command will automatically download and install *laic* to `/usr/local/bin` on Apple Silicon Mac:
 
@@ -38,6 +36,7 @@ curl -L -o laic https://github.com/fujidaiti/live-app-icon/releases/download/v0.
 ```
 
 Or on Intel Mac:
+
 ```shell
 curl -L -o laic https://github.com/fujidaiti/live-app-icon/releases/download/v0.0.1/laic-x86_64-apple-darwin && chmod +x ./laic && sudo mv ./laic /usr/local/bin
 ```
@@ -47,7 +46,7 @@ curl -L -o laic https://github.com/fujidaiti/live-app-icon/releases/download/v0.
 *laic* requires at least 3 arguments:
 
 - `--name` : Name of the app to be generated. Used as its display name in the dock and app launcher.
-- `--gif` :  Path to an animated GIF to be used as the icon of the app. If the width and height of the image are not equal, the image will be resized to a square according to the specified [resize method](#Resize-method).
+- `--gif` :  Path to an animated GIF to be used as the icon of the app. If the width and height of the image are not equal, the image will be resized to a square according to the specified [resize method](#resize-method).
 - `--command` : Shell command to be executed when the generated app is clicked.
 
 The below is an example to generate an animated app icon that is named as "GitHub" that, when clicked, opens the home page of GitHub in your default browser when clicked.
@@ -151,5 +150,4 @@ If you find any bugs or have suggestions for improvement, please create an issue
 ### Others
 
 - [ ] Create a GUI icon generator
-	
 - [ ] Provide a way to create animated icons without Xcode
