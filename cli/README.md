@@ -135,7 +135,7 @@ If you try to run the laic you downloaded, you might see a warning dialog like t
 - [DSFDockTile](https://github.com/dagronf/DSFDockTile) by [@dagronf](https://github.com/dagronf) : A swift library that provides easy APIs for creating animated app icons.
 - [Funk Bass Sticker](https://giphy.com/gifs/vulfpeck-vulf-joe-dart-L3iUyZxjNJ080YJnlt) by [@jsot](https://giphy.com/jsot) : The image in this package has been took from https://giphy.com.
 
-<iframe src="https://giphy.com/embed/L3iUyZxjNJ080YJnlt" width="300" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/vulfpeck-vulf-joe-dart-L3iUyZxjNJ080YJnlt">via GIPHY</a></p>
+[![joe-dart](https://media0.giphy.com/media/L3iUyZxjNJ080YJnlt/giphy.gif)](https://media.giphy.com/media/L3iUyZxjNJ080YJnlt/giphy.gif)
 
 ## Contributing
 
