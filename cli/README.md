@@ -15,11 +15,11 @@ If you have the latest version of Xcode, the above requirements should be met.
 
 ## Install laic
 
-***laic (Live App Icon Creator)*** is a simple CLI tool to generate Live App Icons on macOS. There are 2 ways to install *laic*: using `cargo` from Rust or download a binary.
+***laic (Live App Icon Creator)*** is a simple CLI tool to generate Live App Icons on macOS. There are 2 ways to install laic: using `cargo` from Rust or download a binary.
 
 ### Use cargo
 
-If you are a Rust developer, the easiest way to install *laic* is with `cargo`, since it is published on [crate.io](https://crates.io/crates/laic).
+If you are a Rust developer, the easiest way to install laic is with `cargo`, since it is published on [crate.io](https://crates.io/crates/laic).
 
 ```shell
 cargo install laic
@@ -29,7 +29,7 @@ cargo install laic
 
 There are pre-compiled binraies in [the release page](https://github.com/fujidaiti/live-app-icon/releases). You can manually download and install it in an appropriate location (e.g. `/usr/local/bin`). Select `laic-aarch64-apple-darwin` if you are using Apple Silicon Mac, or `laic-x86_64-apple-darwin` if Intel Mac.
 
-The following one line command will automatically download and install *laic* to `/usr/local/bin` on Apple Silicon Mac:
+The following one line command will automatically download and install laic to `/usr/local/bin` on Apple Silicon Mac:
 
 ```shell
 curl -L -o laic https://github.com/fujidaiti/live-app-icon/releases/download/v0.0.1/laic-aarch64-apple-darwin && chmod +x ./laic && sudo mv ./laic /usr/local/bin
@@ -43,7 +43,7 @@ curl -L -o laic https://github.com/fujidaiti/live-app-icon/releases/download/v0.
 
 ## Usage
 
-*laic* requires at least 3 arguments:
+laic requires at least 3 arguments:
 
 - `--name` : Name of the app to be generated. Used as its display name in the dock and app launcher.
 - `--gif` :  Path to an animated GIF to be used as the icon of the app. If the width and height of the image are not equal, the image will be resized to a square according to the specified [resize method](#resize-method).
@@ -55,7 +55,7 @@ The below is an example to generate an animated app icon that is named as "GitHu
 laic --name "GitHub" --gif path/to/your/gif --command "open https://github.com"
 ```
 
-There are other options that *laic* accepts:
+There are other options that laic accepts:
 
 - `--resize-method` : Specifies how the given GIF will be resized to square. See [Resize method](#resize-method) for more details.
 
@@ -67,7 +67,7 @@ Run `laic --help` for more information.
 
 ### Resize method
 
-If the with and height of the given animated GIF is not equal, *laic* resizes it to a square according to a specified resize method:
+If the with and height of the given animated GIF is not equal, laic resizes it to a square according to a specified resize method:
 
 - `center-crop` : Crops the center of the image with a square whose sides are the same size as the shorter side of the image.
 - `center-fit` : Puts the image on the center of a transparent square whose sides are the same size as the longer side of the image.
@@ -112,9 +112,13 @@ Notice that you need to escape the doube quotes in `--command` part since the sh
 
 ## Uninstall
 
-### laic
+### Cargo
 
-*laic* is just an executable file. You can remove it like `sudo rm /usr/local/bin/laic` , or move it to the Trash by hand.
+If you have installed laic with `cargo install laic`, just run `cargo uninstall laic`.
+
+### 
+
+If you have manually installed a laic executable, you can remove it like `sudo rm /usr/local/bin/laic` , or move it to the Trash by hand.
 
 ### Generated apps
 
@@ -122,7 +126,7 @@ Just move it to the Trash. The default install location is `$HOME/Applications` 
 
 ## Troubleshooting
 
-If you try to run the *laic* you downloaded, you might see a warning dialog like the one in the image below. This is because the binary is not signed by the identified developer. In this case, you must manually allow the app to run according to this article: [Open Mac app from unidentified developer](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an- unidentified-developer-mh40616/mac).
+If you try to run the laic you downloaded, you might see a warning dialog like the one in the image below. This is because the binary is not signed by the identified developer. In this case, you must manually allow the app to run according to this article: [Open Mac app from unidentified developer](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an- unidentified-developer-mh40616/mac).
 
 <img width="676" alt="warning-dialog" src="https://github.com/fujidaiti/github-actions-test/assets/68946713/6c020a41-8f03-45ae-bb7b-70f59eb876d1">
 
