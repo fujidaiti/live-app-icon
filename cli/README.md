@@ -147,7 +147,7 @@ If you find any bugs or have suggestions for improvement, please create an issue
 
 - [ ] Validate the arguments
 - [ ] Refactor the code
-- [ ] Add option to notify the command's output
+- [ ] Add an option to notify the command's output
 - [ ] Improve the report messages
 - [ ] Add tests
 
