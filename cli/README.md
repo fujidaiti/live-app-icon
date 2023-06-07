@@ -132,6 +132,7 @@ If you try to run the laic you downloaded, you might see a warning dialog like t
 
 ## Thanks
 
+- [The original idea](https://twitter.com/neilsardesai/status/1362179114204073984?s=20) by [@neilsardesai](https://twitter.com/neilsardesai)
 - [DSFDockTile](https://github.com/dagronf/DSFDockTile) by [@dagronf](https://github.com/dagronf) : A swift library that provides easy APIs for creating animated app icons.
 - [Funk Bass Sticker](https://giphy.com/gifs/vulfpeck-vulf-joe-dart-L3iUyZxjNJ080YJnlt) by [@jsot](https://giphy.com/jsot) : The image in this package has been took from https://giphy.com.
 
