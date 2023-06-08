@@ -1,6 +1,6 @@
 # Live App Icon for Mac
 
-*Animated app icons on your Dock, which can execute an arbitrary shell script on click.*
+*Animated app icons in your Dock that can run an arbitrary shell script when clicked.*
 
 <img width="800" src="https://github.com/fujidaiti/github-actions-test/assets/68946713/e81a1426-1673-4f78-b1f2-918cac239170"/>
 
