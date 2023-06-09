@@ -8,7 +8,7 @@
 
 - macOS 13 (Ventura) or higher
 - Xcode (or at least `xcodebuild`) version 14.1 or higher
-- Apple Development Certificate
+- Apple Development Certificate (Personal Team ID)
 - Not too old `git`
 
 If you have the latest version of Xcode, the above requirements should be met.
