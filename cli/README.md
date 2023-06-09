@@ -126,7 +126,7 @@ Just move it to the Trash. The default install location is `$HOME/Applications` 
 
 ## Troubleshooting
 
-If you try to run the laic you downloaded, you might see a warning dialog like the one in the image below. This is because the binary is not signed by the identified developer. In this case, you must manually allow the app to run according to this article: [Open Mac app from unidentified developer](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an- unidentified-developer-mh40616/mac).
+If you try to run the laic you downloaded, you might see a warning dialog like the one in the image below. This is because the binary is not signed by the identified developer. In this case, you must manually allow the app to run according to this article: [Open Mac app from unidentified developer](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac).
 
 <img width="676" alt="warning-dialog" src="https://github.com/fujidaiti/github-actions-test/assets/68946713/6c020a41-8f03-45ae-bb7b-70f59eb876d1">
 
