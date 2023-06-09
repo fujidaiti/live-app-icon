@@ -57,7 +57,7 @@ laic --name "GitHub" --gif path/to/your/gif --command "open https://github.com"
 
 There are other options that laic accepts:
 
-- `--resize-method` : Specifies how the given GIF will be resized to square. See [Resize method](#resize-method) for more details.
+- `--resize-method` : Specifies how the given GIF will be resized to a square. See [Resize method](#resize-method) for more details.
 
 - `--install-location` : Path to a directory the app to be installed. The default is `$HOME/Applications`.
 - `--install-action` : Specify the action to be taken when the app is successfully installed. `launch` launches the app immediately, `open-in-finder` opens the directory where the app is installed in the Finder, and `none` does nothing. The default is `launch`.
@@ -67,7 +67,7 @@ Run `laic --help` for more information.
 
 ### Resize methods
 
-If the with and height of the given animated GIF is not equal, laic resizes it to a square according to a specified resize method:
+If the width and height of the given animated GIF are not equal, laic resizes it to a square according to a given resize method:
 
 - `center-crop` : Crops the center of the image with a square whose sides are the same size as the shorter side of the image.
 - `center-fit` : Puts the image on the center of a transparent square whose sides are the same size as the longer side of the image.
