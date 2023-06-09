@@ -49,7 +49,7 @@ laic requires at least 3 arguments:
 - `--gif` :  Path to an animated GIF to be used as the icon of the app. If the width and height of the image are not equal, the image will be resized to a square according to the specified [resize method](#resize-method).
 - `--command` : Shell command to be executed when the generated app is clicked.
 
-The below is an example to generate an animated app icon that is named as "GitHub" that, when clicked, opens the home page of GitHub in your default browser when clicked.
+The below is an example to generate an animated app icon that is named as "GitHub" that, when clicked, opens the home page of GitHub in your default browser.
 
 ```shell
 laic --name "GitHub" --gif path/to/your/gif --command "open https://github.com"
