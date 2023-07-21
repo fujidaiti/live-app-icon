@@ -2,7 +2,7 @@
 
 *Animated app icons in your Dock that can run an arbitrary shell script when clicked.*
 
-<img width="800" src="https://github.com/fujidaiti/github-actions-test/assets/68946713/e81a1426-1673-4f78-b1f2-918cac239170"/>
+<img width="800" src="https://github.com/fujidaiti/live-app-icon/assets/68946713/926a164d-164c-4b82-a254-48db7f8839b2"/>
 
 ## Requirements
 
@@ -80,19 +80,22 @@ The default method is `center-fit`.
 
 It is recommended enabling the "Keep in Dock" option for the app so that the nice animation always catches your eye 👀.
 
-<img width="418" alt="keep-in-dock" src="https://github.com/fujidaiti/github-actions-test/assets/68946713/7c884002-ca66-4feb-9d64-1d4c9fba7867">
+<img width="418" alt="keep-in-dock" src="https://github.com/fujidaiti/live-app-icon/assets/68946713/cfe5ba4f-88b3-4834-a912-1475c53bc60a">
 
 ### Login Items
 
 When the generated app launchs for the first time, it automatically adds itself to Login Items. This is because the animation of the app icon is only available while the app is running. You might notice that if you quit the app, the animation also stops.
 
-<img width="448" alt="add-to-login-items" src="https://github.com/fujidaiti/github-actions-test/assets/68946713/5fd8bbae-6cc1-46f6-835f-210d900c63c6">
+<img width="448" alt="add-to-login-items" src="https://github.com/fujidaiti/live-app-icon/assets/68946713/e3ce73af-8284-421c-bb65-bfe8c0bc2efe">
+
 
 ### Allow notifications
 
 In addition, the app will also require the permission to send notifications at the first launch. It will notify you in a notificaation if an error occurs while running the command.
 
-<img width="448" alt="notification-request" src="https://github.com/fujidaiti/github-actions-test/assets/68946713/4ba8fc46-4414-4a42-acb4-7d38571a3ffb">
+<img width="448" alt="notification-request" src="https://github.com/fujidaiti/live-app-icon/assets/68946713/c49af839-4480-46df-852b-81d2c04c8572">
+
+
 
 ## Integrate with Shortcuts
 
@@ -128,7 +131,7 @@ Just move it to the Trash. The default install location is `$HOME/Applications` 
 
 If you try to run the laic you downloaded, you might see a warning dialog like the one in the image below. This is because the binary is not signed by the identified developer. In this case, you must manually allow the app to run according to this article: [Open Mac app from unidentified developer](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac).
 
-<img width="676" alt="warning-dialog" src="https://github.com/fujidaiti/github-actions-test/assets/68946713/6c020a41-8f03-45ae-bb7b-70f59eb876d1">
+<img width="676" alt="warning-dialog" src="https://github.com/fujidaiti/live-app-icon/assets/68946713/1c67f1e5-02dd-4780-a6dd-af45b2ab7d90">
 
 ## Thanks
 
